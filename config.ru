@@ -6,6 +6,9 @@ use Rack::ContentType
 
 app.route do
   match "", "quotes#index"
+  match "quotes/new", "quotes#new"
+  match "quotes/create", "quotes#create"
+  match "quotes/delete", "quotes#delete"
   match "quotes/index", "quotes#index"
   match "quotes/a_quote", "quotes#a_quote"
   match "sub-app", proc { [200, {}, ["Hello, sub-app!"]] }

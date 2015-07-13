@@ -6,7 +6,8 @@
 <p>
   <b><i>Submitted by <%= quote['submitter'] %></i></b>
 </p>
-
-<p>
-  <%= user_agent %>
-</p>
+<form action='/quotes/delete' method="post">
+  <input type="hidden" name="quote_id" value="<%= quote['id'] %>" />
+  <input type="submit" value="Delete this quote" />
+</form>
+<a href="/quotes/index"><button>View all quotes</button></a>

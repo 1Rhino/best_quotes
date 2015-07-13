@@ -1,9 +1,9 @@
-<h1>All quotes</h1>
-
+<h1>Good quotes</h1>
+  <a href="/quotes/new"><button>Create new quote</button></a>
 <hr />
 <% all_quotes.each do |quote| %>
 <p>
-  <h3>&quot;<%= quote['quote'] %> &quot;</h3>
+  <h3><a href="/quotes/<%= quote['id'] %>">&quot;<%= quote['quote'] %> &quot;</a></h3>
   <i>&ndash; <%= quote["attribution"] %></i>
 </p>
 <p> <b><i>Submitted by <%= quote['submitter'] %></i></b> </p>
